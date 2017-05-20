@@ -6,5 +6,5 @@ install: "pip install -r requirements.txt"
 # command to run tests
 script:
   - mypy pycon/exception_example.py
-  - if [[ $TRAVIS_PYTHON_VERSION == '3.6' ]]; then flake8; fi
+  - if [[ $TRAVIS_PYTHON_VERSION == '3.6' ]]; then flake8 pycon; fi
   - nosetests pycon
