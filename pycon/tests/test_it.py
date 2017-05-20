@@ -7,8 +7,8 @@ from pycon.exception_example import get_id
 class TestStringMethods(unittest.TestCase):
 
     def test_get_id(self):
-        cwd = os.getcwd()
-        fname = os.path.join(cwd, 'pycon', 'tests', 'test.json')
+        filepath = os.path.dirname(os.path.abspath(__file__))
+        fname = os.path.join(filepath, 'test.json')
         uid = get_id(conf_name=fname)
         self.assertEquals(uid, 563)
 
